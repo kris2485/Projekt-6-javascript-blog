@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #fff;
+  background: #D6AFA9;
   font-family: "Source Sans Pro", sans-serif;
   color: #444;
   font-weight: 300;
@@ -72,6 +72,12 @@ body {
 
 .list .active {
   font-weight: bold;
+  color: #7AB1F2;
+}
+
+.list a {
+  text-decoration: none;
+  color: #444;
 }
 
 .list-horizontal li {
