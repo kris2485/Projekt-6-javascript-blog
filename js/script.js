@@ -80,6 +80,9 @@ const optArticleSelector = '.post',
 	    /* create HTML of the link */
 	    titleList.innerHTML = titleList.innerHTML + linkHTML;
 
+	    /* const titleList = document.getElementByID('article-1');
+	    titleList.insertAdjacentHTML('afterend', '<article id="article-2"></article>');
+
 	    /* insert link into titleList */
 	    html = html + linkHTML;
 		
