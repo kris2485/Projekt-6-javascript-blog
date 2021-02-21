@@ -212,5 +212,12 @@ function authorClickHandler(event) {
   for (let allAuthorsLink of allAuthorsLinks) {
     allAuthorsLink.classList.add('active');
   }
-  generateTitleLinks('[data-author~="' + author + '"]');
+  generateTitleLinks('[data-author="' + author + '"]');
 }
+function addClickListenersToAuthors() {
+  const allLinksToAuthors = document.querySelectorAll('a[href ^= "#author"]');
+  for (let allLinkToAuthor of allLinksToAuthors) {
+    allLinkToAuthor.addEventListener('click', authorClickHandler);
+  }
+}
+addClickListenersToAuthors();
