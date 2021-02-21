@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext");
 /* Variables */
 /* Global */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
-  background: #D6AFA9;
+  background: #d6afa9;
   font-family: "Source Sans Pro", sans-serif;
   color: #444;
   font-weight: 300;
@@ -46,7 +48,8 @@ body {
   flex: 2 0 0;
 }
 
-.sidebar, .posts {
+.sidebar,
+.posts {
   background: #fff;
   margin-right: 10px;
   padding: 40px;
@@ -72,12 +75,13 @@ body {
 
 .list .active {
   font-weight: bold;
-  color: #7AB1F2;
+  color: #7ab1f2;
 }
 
 .list a {
   text-decoration: none;
   color: #444;
+  padding: 3px;
 }
 
 .list-horizontal li {
