@@ -175,3 +175,24 @@ function addClickListenersToTags() {
   }
 }
 addClickListenersToTags();
+
+function generateAuthors() {
+  const articles = document.querySelectorAll(optArticleSelector);
+  for (let article of articles) {
+    const authorWrapper = article.querySelector(optArticleAuthorSelector);
+    console.log('authorWrapper:', authorWrapper);
+    let html = '';
+    const articleAuthor = article.getAttribute('data-author');
+    console.log(articleAuthor);
+    const authorHTML =
+      '<li><a href="#author-' +
+      articleAuthor +
+      '">' +
+      'by ' +
+      articleAuthor +
+      '</a></li>';
+    html = html + authorHTML;
+    authorWrapper.innerHTML = html;
+  }
+}
+generateAuthors();
