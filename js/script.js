@@ -93,15 +93,14 @@ function generateTitleLinks(customSelector = '') {
     html = html + linkHTML;
   }
   titleList.innerHTML = html;
+  const links = document.querySelectorAll('.titles a');
+
+  for (let link of links) {
+    link.addEventListener('click', titleClickHandler);
+  }
 }
 
 generateTitleLinks();
-
-const links = document.querySelectorAll('.titles a');
-
-for (let link of links) {
-  link.addEventListener('click', titleClickHandler);
-}
 
 function generateTags() {
   /* find all articles */
@@ -196,3 +195,22 @@ function generateAuthors() {
   }
 }
 generateAuthors();
+
+function authorClickHandler(event) {
+  event.preventDefault();
+  const clickedElement = this;
+  const href = clickedElement.getAttribute('href');
+  const author = href.replace('#author-', '');
+  const activeAuthorLinks = document.querySelectorAll(
+    'a.active[href ^= "#author-"]'
+  );
+  console.log(activeAuthorLinks);
+  for (let activeAuthorLink of activeAuthorLinks) {
+    activeAuthorLink.classList.remove('active');
+  }
+  const allAuthorsLinks = document.querySelectorAll('a[href="' + href + '"]');
+  for (let allAuthorsLink of allAuthorsLinks) {
+    allAuthorsLink.classList.add('active');
+  }
+  generateTitleLinks('[data-author~="' + author + '"]');
+}
