@@ -127,3 +127,27 @@ body {
     margin: 0 10px 0 0;
   }
 }
+.tags {
+  display: flex;
+  flex-flow: wrap;
+  .tag-size-1 {
+    font-size: 100%;
+    color: blue;
+  }
+  .tag-size-2 {
+    font-size: 125%;
+    color: yellow;
+  }
+  .tag-size-3 {
+    font-size: 150%;
+    color: green;
+  }
+  .tag-size-4 {
+    font-size: 175%;
+    color: lightseagreen;
+  }
+  .tag-size-5 {
+    font-size: 200%;
+    color: magenta;
+  }
+}
