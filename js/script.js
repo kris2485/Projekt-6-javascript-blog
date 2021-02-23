@@ -295,10 +295,10 @@ function generateAuthors() {
     //const authorLinkHTML = '<li><a href="#author-' + author + '"class"' + calculateAuthorsParams(allAuthors[author], authorsParams) + '">' + author + '(' + allAuthors[author] + ') </a></li> ';
     //console.log('authorLinkHTML:', authorLinkHTML);
     //allAuthorsHTML += authorLinkHTML;
-    allAuthorsHTML.author.push({
+    allAuthorsHTML.authors.push({
       author: author,
       count: allAuthors[author],
-      className: calculateAuthorsParams(allAuthors[author]),
+      className: calculateAuthorsParams(allAuthors[author], authorsParams),
     });
   }
   //authorList.innerHTML = allAuthorsHTML;
