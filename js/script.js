@@ -258,15 +258,15 @@ function generateAuthors() {
     const authorHTML = '<li><a href="#author-' + articleAuthor + '">' + 'by ' + articleAuthor + '</a></li>';
     html = html + authorHTML;
 
-    if (!allAuthors[author]) {
-      allAuthors[author] = 1;
+    if (!allAuthors[articleAuthor]) {
+      allAuthors[articleAuthor] = 1;
     } else {
       allAuthors[author]++;
     }
     authorWrapper.innerHTML = html;
   }
 
-  const authorList = document.querySelector('.authors');
+  const authorList = document.querySelector(optAuthorsListSelector);
 
   const authorsParams = calculateAuthorsParams(allAuthors);
   console.log('authorsParams:', authorsParams);
